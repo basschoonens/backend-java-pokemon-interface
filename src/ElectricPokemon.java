@@ -3,15 +3,24 @@ import java.util.List;
 
 public class ElectricPokemon extends Pokemon{
 
-    String type;
-    String name;
+    public static final String type = "electric";
+    private static final List<String> attacks = Arrays.asList("Thunderpunch","ElectroBall","Thunder","VoltTackle");
 
 
     public ElectricPokemon(String name, int level, int hp, String food, String sound) {
-        super(name, level, hp, food, sound);
+        super(type, name, level, hp, food, sound);
     }
 
-    void thunderPunch(Pokemon name, Pokemon enemy);
+
+    public void thunderPunch(Pokemon name, Pokemon enemy){
+        System.out.println(name.getName()+"hit"+enemy.getName()+"with Thunderpunch");
+        switch (enemy.getType()){
+            case "water": {
+                System.out.println(enemy.getName()+"loses 30 HP");
+                enemy.setHp(enemy.getHp()-30);
+            }
+        }
+    }
 
     void electroBall(Pokemon name, Pokemon enemy);
 
@@ -19,7 +28,8 @@ public class ElectricPokemon extends Pokemon{
 
     void voltTackle(Pokemon name, Pokemon enemy);
 
-    public String getType() {
-        return type;
+    List<String> getAttacks() {
+        return attacks;
     }
+
 }

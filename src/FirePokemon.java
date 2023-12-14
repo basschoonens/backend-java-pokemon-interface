@@ -18,5 +18,8 @@ public class FirePokemon extends Pokemon{
 
     void flameThrower(Pokemon name, Pokemon enemy);
 
+    public String getType() {
+        return type;
+    }
 
 }

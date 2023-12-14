@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 
 public class GrassPokemon extends Pokemon {
@@ -18,5 +19,8 @@ public class GrassPokemon extends Pokemon {
 
     public void leaveBlade(Pokemon name, Pokemon enemy);
 
+    public String getType() {
+        return type;
+    }
 
 }
