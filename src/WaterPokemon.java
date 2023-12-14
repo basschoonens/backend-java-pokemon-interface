@@ -1,9 +1,12 @@
 import java.util.List;
 
-public class WaterPokemon {
+public class WaterPokemon extends Pokemon{
 
-    List<String> getAttacks() {
-        return attacks;
+    String type;
+    String name;
+
+    public WaterPokemon(String name, int level, int hp, String food, String sound) {
+        super(name, level, hp, food, sound);
     }
 
     void surf(Pokemon name, Pokemon enemy);

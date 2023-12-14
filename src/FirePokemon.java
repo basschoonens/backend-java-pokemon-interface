@@ -1,13 +1,13 @@
 import java.util.List;
 
-public class FirePokemon {
+public class FirePokemon extends Pokemon{
 
-    private String name;
-    private int hp;
-    private int xp;
+    String type;
+    String name;
 
-    List<String> getAttacks() {
-        return attacks;
+
+    public FirePokemon(String name, int level, int hp, String food, String sound) {
+        super(name, level, hp, food, sound);
     }
 
     void inferno(Pokemon name, Pokemon enemy);
